@@ -247,15 +247,6 @@ function RegisterationForm() {
                     className="position-relative"
                   >
                     <Form.Label>Apply For</Form.Label>
-                    {/* <Form.Control
-                      type="select"
-                      name="email"
-                      
-                      placeholder="Select Role"
-                      value={values.email}
-                      onChange={handleChange}
-                      isValid={touched.email && !errors.email}
-                    /> */}
                     <select
                       name="applyFor"
                       className="form-control select"
@@ -263,7 +254,6 @@ function RegisterationForm() {
                       placeholder="Select Role"
                       value={values.applyFor}
                       onChange={handleChange}
-                      //   isValid={touched.email && !errors.email}
                     >
                       <option value="">Select Role</option>
                       <option value="2">Master Distributor</option>
@@ -339,7 +329,7 @@ function RegisterationForm() {
                     <Form.Control
                       type="file"
                       required
-                      name="PAN"
+                      name="panPhoto"
                       onChange={handleChange}
                       isInvalid={!!errors.panPhoto}
                     />
@@ -438,9 +428,6 @@ function RegisterationForm() {
                     <formik.ErrorMessage name="address">
                       {(msg) => <div style={{ color: "red" }}>{msg}</div>}
                     </formik.ErrorMessage>
-                    {/* <Form.Control.Feedback type="invalid" tooltip>
-                      {errors.address}
-                    </Form.Control.Feedback> */}
                   </Form.Group>
                 </Row>
                 <Button type="submit">Submit form</Button>
